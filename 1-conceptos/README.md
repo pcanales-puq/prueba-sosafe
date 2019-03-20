@@ -16,7 +16,7 @@ Por favor responde cada pregunta de alternativas marcando con una `[x]` donde co
   ```
   [ ] S3
   [ ] SNS
-  [X] SQS -> cola de tio FIFO
+  [X] SQS 
   [ ] SMS
   ```
 
@@ -60,8 +60,8 @@ Para asegurar la calidad hay que definir normas de actualizacion de ramas en los
 7. Desarrolla: En tus palabras ¿qué son las funciones Lambda en AWS, y qué beneficios ofrece frente a alternativas como EC2 o ECS?:
   ```
   Respuesta:
-	Son funciones que pueden las cuales son utiilizadas solo cuando se requieren, es decir, una aplicaicon invoca el codigo de la función solo en ciertos eventos. 
-	Las funciones Lambda permiten impleetar arquitectura serverless, y solo es conusmido el recurso cuando es invocado.
+	Son funciones o codigos que pueden ser  utiilizadas solo cuando se requieren, es decir, una aplicaicon invoca el codigo de la función solo en ciertos eventos. 
+	Las funciones Lambda permiten implementar arquitectura serverless, y solo es consumido cuando el recurso cuando es invocado.
   ```
 
 8. Elige 2: ¿Para qué sirve Route53?:
