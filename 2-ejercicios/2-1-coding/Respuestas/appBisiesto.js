@@ -1,3 +1,3 @@
 const utils = require('./utils/bisiesto');
-let anio = 2001;
-console.log('el año ' + anio + (utils.esBisiesto? ' es bisiesto' : 'no es bisiesto'));
+let anio = 2004;
+console.log('el año [' + anio + (utils.esBisiesto(anio)? '] es bisiesto' : '] no es bisiesto'));
