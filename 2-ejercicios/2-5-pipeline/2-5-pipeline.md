@@ -1,4 +1,4 @@
-Escribe la definición de un pipeline como código que _compile/empaquete_ la aplicación alojada en el siguiente repositorio:
+﻿Escribe la definición de un pipeline como código que _compile/empaquete_ la aplicación alojada en el siguiente repositorio:
 
 https://github.com/MarkFChavez/bitcoin-price-index
 
@@ -6,12 +6,24 @@ Y luego ejecute los tests construidos para este proyecto. Éste corresponde a un
 
 ```respuesta
 NO se entiende bien a que se refiere( hay que definir suponiendo que se ejecute con jenkins, aws commit code, code deploy)
+# se asume git instalado y lo spligins dsl y en el archivo de configuracion las rutas de los entornos
+pipeline {
+agent any
+stages{
+	stage('git') 
+		sh 'rm -rf *'
+        	git 'https://github.com/pcanales-puq/prueba-sosafe.git'
+	stage ('deploy')
+		sh 'npm install'
+		sh 'npm run deploy'
+	stage ('build')
+		sh 'npm run build'
+	stage ('test')
+		sh 'npm test'
 
-1.- pipeline conexion a repositorio : confgurar acceso a repositorio y obneter copia de rama en un ambiente de build.
-2.- pipeline analisis de codigo estatico : se asume que esta configurado sonarqube, y verifcar que cumple las metricas 
-3.- pipeline de ejecucion : ejecutar aplicacion
-4.- pipeline ejecucion de pruebas : ejeuctar npmp run test
-5.- pipeline construncio : constrior la aplicacion "build" 
+}
+
+}
 
 ```
 
